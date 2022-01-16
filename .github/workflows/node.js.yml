@@ -25,6 +25,13 @@ jobs:
         npm run gulp web:package
         
     - run : ls ./build/web/static/libs
+    
+    - run : |
+        mkdir -P ./build/demo/bootstrap
+        cp -r ./build/web/static/libs/bootstrap ./build/demo/bootstrap
+        
+        mkdir -P ./build/demo/libSieve
+        cp -r ./build/web/static/libs/libSieve ./build/demo/libSieve     
         
 #    - run: npm run build --if-present
 #    - run: npm test
