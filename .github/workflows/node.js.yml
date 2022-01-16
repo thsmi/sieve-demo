@@ -17,14 +17,14 @@ jobs:
       with:
         repository: thsmi/sieve
     
-    - name: Use Node.js
-      uses: actions/setup-node@v2
+#    - name: Use Node.js
+#      uses: actions/setup-node@v2
 
     - run: |
         npm install
         npm run gulp web:package
         
-    - run : ls ./build/web/static
+    - run : ls ./build/web/static/libs
         
 #    - run: npm run build --if-present
 #    - run: npm test
