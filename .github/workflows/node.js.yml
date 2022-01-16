@@ -25,9 +25,9 @@ jobs:
 
     - run: |
         npm install
-        npm run gulp test:package
+        npm run gulp web:package
         
-    - run : ls
+    - run : ls ./build/web/static
         
 #    - run: npm run build --if-present
 #    - run: npm test
