@@ -39,7 +39,13 @@ jobs:
         
         ls ./build/demo
         
-        cd ./build/demo && git status
+        cd ./build/demo        
+        git status
+        git add -A
+        git commit -m "Automated update"
+        git status
+        
+        git push
         
                 
 #    - run: npm run build --if-present
