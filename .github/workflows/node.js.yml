@@ -5,6 +5,10 @@ name: Node.js CI
 
 on:
   workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Git ref to checkout, can be the branch, tag, or SHA, typically the release Tag'
+        required: true
 
 jobs:
   build:
@@ -16,6 +20,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: thsmi/sieve
+        ref: ${{ github.event.inputs.ref }}
     
 #    - name: Use Node.js
 #      uses: actions/setup-node@v2
@@ -23,8 +28,6 @@ jobs:
     - run: |
         npm install
         npm run gulp web:package
-        
-    - run : ls ./build/web/static/libs
     
     - run : |
         git clone https://github.com/thsmi/sieve-demo.git ./build/demo
@@ -49,6 +52,3 @@ jobs:
         git diff-index --quiet HEAD || (git commit -m "Automated update" && git push)
         git status        
         
-                
-#    - run: npm run build --if-present
-#    - run: npm test
