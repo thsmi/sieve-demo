@@ -37,20 +37,17 @@ jobs:
         rm -rf ./build/demo/libSieve
         cp -r ./build/web/static/libs/libSieve ./build/demo/libSieve     
         
-        ls ./build/demo
-        
+    - run : |
         cd ./build/demo        
         git status
-        
+                        
         git config user.name 'thsmi'
         git config user.email 'thsmi@users.noreply.github.com'
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
         
         git add -A
-        git commit -m "Automated update"
-        git status
-        
-        git push
+        git diff-index --quiet HEAD || (git commit -m "Automated update" && git push)
+        git status        
         
                 
 #    - run: npm run build --if-present
