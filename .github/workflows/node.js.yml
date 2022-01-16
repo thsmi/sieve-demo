@@ -37,6 +37,8 @@ jobs:
         
         ls ./build/demo
         
+        git status
+        
                 
 #    - run: npm run build --if-present
 #    - run: npm test
