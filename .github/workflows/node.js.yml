@@ -27,13 +27,16 @@ jobs:
     - run : ls ./build/web/static/libs
     
     - run : |
-        mkdir -P ./build/demo/bootstrap
+        git clone https://github.com/thsmi/sieve-demo.git ./build/demo
+        
+        mkdir -p ./build/demo/bootstrap
         cp -r ./build/web/static/libs/bootstrap ./build/demo/bootstrap
         
-        mkdir -P ./build/demo/libSieve
+        mkdir -p ./build/demo/libSieve
         cp -r ./build/web/static/libs/libSieve ./build/demo/libSieve     
         
         ls ./build/demo
         
+                
 #    - run: npm run build --if-present
 #    - run: npm test
