@@ -30,9 +30,11 @@ jobs:
         git clone https://github.com/thsmi/sieve-demo.git ./build/demo
         
         mkdir -p ./build/demo/bootstrap
+        rm -rf ./build/demo/bootstrap
         cp -r ./build/web/static/libs/bootstrap ./build/demo/bootstrap
         
         mkdir -p ./build/demo/libSieve
+        rm -rf ./build/demo/libSieve
         cp -r ./build/web/static/libs/libSieve ./build/demo/libSieve     
         
         ls ./build/demo
