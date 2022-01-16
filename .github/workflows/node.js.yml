@@ -26,8 +26,8 @@ jobs:
     - run: |
         npm install
         npm run gulp test:package
-    - shell: sh
-      run : ls
+        
+    - run : ls
         
 #    - run: npm run build --if-present
 #    - run: npm test
