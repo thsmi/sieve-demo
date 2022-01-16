@@ -49,6 +49,6 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
         
         git add -A
-        git diff-index --quiet HEAD || (git commit -m "Automated update" && git push)
+        git diff-index --quiet HEAD || (git commit -m "Automated update to ${{ github.event.inputs.ref }}" && git push)
         git status        
         
