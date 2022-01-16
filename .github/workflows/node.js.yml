@@ -19,7 +19,6 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: thsmi/sieve
-        path: './source'
     
     - name: Use Node.js
       uses: actions/setup-node@v2
