@@ -26,4 +26,3 @@ https://thsmi.github.io/sieve-demo/libSieve/SieveGui.html?debug
 6. When done click the Update Sieve Script button in the Script tab.
    
 7. Copy your sieve script from the "Result" textbox.
-8. 
