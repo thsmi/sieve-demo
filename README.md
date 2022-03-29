@@ -5,13 +5,13 @@ The graphical sieve scipt editor is a pure HTLM5 application and thus runs off a
 Please note this demo contains only the raw graphical script editor which edit scripts. In case you want to manage sieve script or a plaintext editor with syntax highlighting you need to use either the standalone app, or the web application or the thunderbird extension. Web browsers can't talk directly to a sieve server.
 
 You find a demo here:
-https://thsmi.github.io/sieve-demo/libSieve/SieveGui.html
+[https://thsmi.github.io/sieve-demo/libSieve/SieveGui.html](https://thsmi.github.io/sieve-demo/libSieve/SieveGui.html)
 
 
 # How to Use
 
 1. Open the link in your webbrowser:
-https://thsmi.github.io/sieve-demo/libSieve/SieveGui.html
+[https://thsmi.github.io/sieve-demo/libSieve/SieveGui.html](https://thsmi.github.io/sieve-demo/libSieve/SieveGui.html)
 
 2. Open the capabilities tab and select the capabilities supported by your server.
    In case the capabilites are set incorrectly, parsing errors are likely.
